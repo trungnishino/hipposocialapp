@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * Created by Mohammed Alsudani on 7/28/19 5:52 PM
+  ~ *  linkedin =  https://www.linkedin.com/in/alsudani-mohammed-259a28152
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 7/28/19 5:52 PM
+  ~  */
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/noimage" />
+
+    <RelativeLayout
+        android:id="@+id/textlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@id/imageView2"
+        android:layout_toLeftOf="@id/imageView2"
+        android:background="@drawable/rounded_corner1">
+
+        <TextView
+            android:id="@+id/textContentUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="Hi , how are you today?"
+            android:paddingRight="8dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textContentUser"
+            android:maxLines="1"
+            android:padding="6dp"
+            android:text="now"
+            android:singleLine="true"
+            android:textColor="@color/textligthcolor"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textlayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:visibility="gone">
+
+            <VideoView
+                android:id="@+id/Video_View"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/ic_play_button" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
